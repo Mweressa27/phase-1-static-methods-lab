@@ -8,9 +8,9 @@ return string.replace(/[^A-Za-z0-9-' ]+/g,"");
   }
 
 
-  static titleize(inputString) {
+  static titleize(string) {
     const smallWords = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from'];
-    return inputString
+    return string
       .split(' ')
       .map((word, index) => {
         if (index === 0 || !smallWords.includes(word.toLowerCase())) {
